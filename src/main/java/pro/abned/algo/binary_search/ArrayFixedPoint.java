@@ -12,14 +12,14 @@ package pro.abned.algo.binary_search;
  */
 public class ArrayFixedPoint {
     public static int get(int[] input) {
-        int r = input.length;
+        int r = input.length - 1;
         int l = 0;
-        while (l < r) {
+        while (l <= r) {
             int mid = (l + r) / 2;
             if (input[mid] == mid) {
                 return mid;
             }
-            if (input[mid] > mid) {
+            if (input[mid] < mid) {
                 l = mid + 1;
             } else {
                 r = mid - 1;
